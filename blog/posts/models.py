@@ -20,7 +20,7 @@ class Post(models.Model):
 	title = models.CharField(max_length=255, verbose_name='Blog Title')
 	content = models.TextField(null=True, blank=True)
 	publish = models.CharField(max_length=120, choices=PUBLISH_CHOICES, default='publish')
-	publish_date = models.DateField(auto_now=False, auto_now_add=False, default=timezone.now)
+	publish_date = models.DateTimeField(auto_now=False, auto_now_add=False, default=timezone.now)
 	updated = models.DateTimeField(auto_now=True)
 	likes = models.IntegerField(default=0)
 

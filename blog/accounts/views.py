@@ -44,9 +44,11 @@ def follow_user_view(request, pk):
 
 def unfollow_user_view(request, pk):
     if request.method == "POST":
-        user_to_follow = get_object_or_404(User, id=pk)
+        user_to_follow = get_object_or_404(User, pk=pk)
         user1 = request.user
-        Following.objects.filter(target=user_to_follow.id, follower=user1.id).delete()
+        link = Following.objects.filter(target=user_to_follow.id, follower=user1.id)
+        print(link)
+        link.delete()
         return redirect('user-posts', user_to_follow)
     else:
         return redirect('blog-home')

@@ -10,7 +10,7 @@
               <small class="text-muted">{{ user_i.target.email }}</small>
             </div class="col-lg-4 col-6">
             <!-- <h2><a class="article-title" href="{% url 'user-posts' user_i.target %}">{{ user_i.target.email }}</a></h2> -->
-            <form action="{% url 'unfollow-user' user.pk %}" method="post">
+            <form action="{% url 'unfollow-user' user_i.target.pk %}" method="post">
               {% csrf_token %}
               <button class="btn btn-outline-info" type="submit" name="button" value='profile_user'>Unfollow {{ user_i.target }}</button>
             </form>

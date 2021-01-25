@@ -15,7 +15,7 @@ class FeedListView(LoginRequiredMixin, ListView):
     model = Post
     template_name = 'posts/home.html'  # <app>/<model>_<viewtype>.html
     context_object_name = 'posts'
-    ordering = ['-publish_date']
+    # ordering = ['publish_date']
     paginate_by = 5
 
     def get_queryset(self):
