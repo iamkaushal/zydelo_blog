@@ -1,0 +1,9 @@
+*.pyc
+blog/__pycache__/settings.cpython-37.pyc
+
+venv/
+blog/__pycache__/
+accounts/__pycache__/
+accounts/migrations/__pycache__/
+posts/__pycache__/
+posts/migrations/__pycache__/
